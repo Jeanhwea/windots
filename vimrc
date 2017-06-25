@@ -1,6 +1,5 @@
 " must set first
 if &compatible | set nocompatible | endif
-
 let mapleader="\\"
 let g:mapleader="\\"
 let maplocalleader=","
@@ -57,11 +56,9 @@ else
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<
 endif
 if has('clipboard') | set clipboard=unnamed | endif
-if has('unix')
-  let &backupdir = $HOME.'/.vim/tmp/backup,/tmp,.'
-  let &undodir = $HOME.'/.vim/tmp/undo,/tmp,.'
-  let &directory = $HOME.'/.vim/tmp/swap,/tmp,.'
-endif
+let &backupdir = $HOME.'/.vim/tmp/backup,/tmp,.'
+let &undodir = $HOME.'/.vim/tmp/undo,/tmp,.'
+let &directory = $HOME.'/.vim/tmp/swap,/tmp,.'
 
 if executable('grep')
   set grepprg=grep\ -rnH\
