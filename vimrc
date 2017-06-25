@@ -119,7 +119,7 @@ endif "has('autocmd')
 " }}}
 
 " remove toolbar, scrolling bar, menu
-set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
+set guioptions-=T guioptions-=e guioptions-=L guioptions-=r guioptions-=m
 
 
 " set guifont=Courier\ New:h10
