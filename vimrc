@@ -126,11 +126,10 @@ command! -bar -nargs=0 Bigger
 command! -bar -nargs=0 Smaller
             \ :let &guifont = substitute(&guifont,'\d\+$','\=submatch(0)-1','')
 
+" avoid chinese menu missing encoding
+source $vimruntime/delmenu.vim
+source $vimruntime/menu.vim
 
 " set messages to English
-if has('win32')||has('win64')
-  language messages en_US.utf-8
-endif
+language messages en_US.utf-8
 
-
-" vim:set foldmethod=marker spell:
