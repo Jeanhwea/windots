@@ -133,3 +133,6 @@ source $vimruntime/menu.vim
 " set messages to English
 language messages en_US.utf-8
 
+" ctrlp
+let g:ctrlp_cmd = 'CtrlPMRUFiles'
+
