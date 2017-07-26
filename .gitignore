@@ -1,6 +1,7 @@
 emacs/elpa
 emacs/chinese-fonts-setup/*
 emacs/eshell/*
+emacs/url/*
 vim/bundle/*
 vim/tmp/*
 #*#
