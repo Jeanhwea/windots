@@ -31,6 +31,8 @@
 ;; keep a list of recently opened files
 (require 'recentf)
 (recentf-mode 1)
+;; set F7 to list recently opened file
+(global-set-key (kbd "<f7>") 'recentf-open-files)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
