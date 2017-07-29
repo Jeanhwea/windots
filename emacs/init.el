@@ -5,8 +5,32 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+;; upcase and lowercase
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+
+;; auto insert closing bracket
+(electric-pair-mode 1)
+
+;; turn on bracket match highlight
+(show-paren-mode 1)
+
+;; remember cursor position, for emacs 25.1 or later
+(save-place-mode 1)
+
+;; UTF-8 as default encoding
+(set-language-environment "UTF-8")
+(set-default-coding-systems 'utf-8)
+
+;; show cursor position within line
+(column-number-mode 1)
+
+;; backup in one place. flat, no tree structure
+(setq backup-directory-alist '(("" . "~/.emacs.d/backup")))
+
+;; keep a list of recently opened files
+(require 'recentf)
+(recentf-mode 1)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -36,3 +60,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+

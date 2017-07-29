@@ -1,3 +1,5 @@
+emacs/places
+emacs/recentf
 emacs/elpa
 emacs/chinese-fonts-setup/*
 emacs/eshell/*
