@@ -11,7 +11,7 @@
  '(initial-frame-alist (quote ((width . 150) (height . 50))))
  '(package-selected-packages
    (quote
-    (color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized smex vdiff-magit magithub magit ## chinese-fonts-setup))))
+    (yasnippet color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized smex vdiff-magit magithub magit ## chinese-fonts-setup))))
 
 (require 'cnfonts)
 ;; 让 cnfonts 随着 Emacs 自动生效。

@@ -10,14 +10,14 @@
 (when (< emacs-major-version 24)
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+
 (package-initialize)
 
 ;; remove some distracting things
 (setq inhibit-startup-message t)
 (setq ring-bell-function 'ignore)
-
 ;; Turn off mouse interface early in startup to avoid momentary display
-; (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+;; (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
@@ -44,17 +44,26 @@
 ;; backup in one place. flat, no tree structure
 (setq backup-directory-alist '(("" . "~/.emacs.d/backup")))
 
-;; keep a list of recently opened files
-(require 'recentf)
-(recentf-mode t)
-;; set F7 to list recently opened file
-(global-set-key (kbd "<f7>") 'recentf-open-files)
 
 ;; Keep emacs Custom-settings in separate file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
 ;; dipslay time in 24hr format
-;(display-time-mode t)
-;(setq display-time-24hr-format t)
- 
+;; (display-time-mode t)
+;; (setq display-time-24hr-format t)
+
+
+
+;; -------------------- setup plugins --------------------
+
+
+;; keep a list of recently opened files
+(require 'recentf)
+(recentf-mode t)
+;; set F7 to list recently opened file
+(global-set-key (kbd "<f7>") 'recentf-open-files)
+
+
+(require 'yasnippet)
+(yas-global-mode t)
