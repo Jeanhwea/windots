@@ -1,11 +1,14 @@
+emacs/chinese-fonts-setup/*
+emacs/elpa
+emacs/eshell/*
 emacs/places
 emacs/recentf
-emacs/elpa
-emacs/chinese-fonts-setup/*
-emacs/eshell/*
+emacs/server/*
 emacs/url/*
+
 vim/bundle/*
 vim/tmp/*
+
 #*#
 *~
 *.swp
