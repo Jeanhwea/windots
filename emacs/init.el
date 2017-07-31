@@ -17,17 +17,31 @@
 
 ;; -------------------- initial options --------------------
 ;; open default disabled items
-(put 'upcase-region 'disabled nil)
-(put 'downcase-region 'disabled nil)
+(progn
+  ;; stop warning prompt for some commands. There's always undo.
+  (put 'narrow-to-region 'disabled nil)
+  (put 'narrow-to-page 'disabled nil)
+  (put 'upcase-region 'disabled nil)
+  (put 'downcase-region 'disabled nil)
+  (put 'erase-buffer 'disabled nil)
+  (put 'scroll-left 'disabled nil)
+  (put 'dired-find-alternate-file 'disabled nil)
+)
 ;; remove some distracting things
 (setq inhibit-startup-message t)
 (setq ring-bell-function 'ignore)
-;; (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+;; (if (fboundp 'menu-bar-mode) (menu-bar-mode 0))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode 0))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode 0))
 
 
 ;; -------------------- configuration mode --------------------
+;; make cursor movement stop in between camelCase words.
+(global-subword-mode t)
+;; turn on highlighting current line
+(global-hl-line-mode t)
+;; when a file is updated outside emacs, make it update if it's already opened in emacs
+(global-auto-revert-mode t)
 ;; auto insert closing bracket
 (electric-pair-mode t)
 ;; make typing delete/overwrite selected text
@@ -41,17 +55,8 @@
 (set-default-coding-systems 'utf-8)
 ;; show cursor position within line
 (column-number-mode t)
-;; make cursor movement stop in between camelCase words.
-(global-subword-mode t)
-;; turn on highlighting current line
-(global-hl-line-mode t)
-;; when a file is updated outside emacs, make it update if it's already opened in emacs
-(global-auto-revert-mode t)
-;; tab, space, indentation settings
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-(setq-default c-basic-offset 4)
-(setq c-default-style "linux" c-basic-offset 4)
+;; make cursor not blink
+(blink-cursor-mode 0)
 
 
 ;; -------------------- misc --------------------
@@ -65,7 +70,30 @@
 (load custom-file)
 ;; dipslay time in 24hr format
 ;; (display-time-mode t)
+;; set cursor to i-beam
+;; (modify-all-frames-parameters (list (cons 'cursor-type 'bar)))
+;; tab, space, indentation settings
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq-default c-basic-offset 4)
+(setq c-default-style "linux" c-basic-offset 4)
+;; replace yes/no to y/n, easy answer is better to me
+(defalias 'yes-or-no-p 'y-or-n-p)
 ;; (setq display-time-24hr-format t)
+;; hippie-expand setting
+(setq hippie-expand-try-functions-list
+      '(
+        try-expand-dabbrev
+        try-expand-dabbrev-all-buffers
+        ;; try-expand-dabbrev-from-kill
+        try-complete-lisp-symbol-partially
+        try-complete-lisp-symbol
+        try-complete-file-name-partially
+        try-complete-file-name
+        ;; try-expand-all-abbrevs
+        ;; try-expand-list
+        ;; try-expand-line
+        ))
 
 
 ;; -------------------- setup plugins --------------------
