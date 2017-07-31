@@ -2,6 +2,7 @@
 ;; author: hujinghui
 ;; github: http://github.com/Jeanhwea
 
+
 ;; -------------------- package manager --------------------
 ;; load EMACS 24's package system. Add MELPA repository.
 (when (>= emacs-major-version 24)
@@ -13,6 +14,7 @@
 
 (package-initialize)
 
+
 ;; -------------------- initial options --------------------
 ;; open default disabled items
 (put 'upcase-region 'disabled nil)
@@ -23,6 +25,7 @@
 ;; (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
 
 ;; -------------------- configuration mode --------------------
 ;; auto insert closing bracket
@@ -38,6 +41,8 @@
 (set-default-coding-systems 'utf-8)
 ;; show cursor position within line
 (column-number-mode t)
+;; make cursor movement stop in between camelCase words.
+(global-subword-mode 1)
 
 
 ;; -------------------- misc --------------------
@@ -46,7 +51,6 @@
 ;; Keep emacs Custom-settings in separate file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
-
 ;; dipslay time in 24hr format
 ;; (display-time-mode t)
 ;; (setq display-time-24hr-format t)
