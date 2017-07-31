@@ -1,10 +1,11 @@
-emacs/chinese-fonts-setup/*
+emacs/cnfonts/*
 emacs/elpa
 emacs/eshell/*
 emacs/places
 emacs/recentf
 emacs/server/*
 emacs/url/*
+
 
 vim/bundle/*
 vim/tmp/*

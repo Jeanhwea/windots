@@ -11,14 +11,13 @@
  '(initial-frame-alist (quote ((width . 150) (height . 50))))
  '(package-selected-packages
    (quote
-    (vdiff-magit magithub dash magit ## chinese-fonts-setup))))
+    (color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized smex vdiff-magit magithub magit ## chinese-fonts-setup))))
 
-
-(require 'chinese-fonts-setup)
-;; 让 chinese-fonts-setup 随着 emacs 自动生效。
-(chinese-fonts-setup-enable)
+(require 'cnfonts)
+;; 让 cnfonts 随着 Emacs 自动生效。
+(cnfonts-enable)
 ;; 让 spacemacs mode-line 中的 Unicode 图标正确显示。
-(cfs-set-spacemacs-fallback-fonts)
+(cnfonts-set-spacemacs-fallback-fonts)
   
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

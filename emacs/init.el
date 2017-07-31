@@ -55,6 +55,6 @@
 (load custom-file)
 
 ;; dipslay time in 24hr format
-(display-time-mode t)
-(setq display-time-24hr-format t)
+;(display-time-mode t)
+;(setq display-time-24hr-format t)
  
