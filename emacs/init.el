@@ -61,8 +61,15 @@
 (require 'recentf)
 (recentf-mode t)
 ;; set F7 to list recently opened file
-(global-set-key (kbd "<f7>") 'recentf-open-files)
+;; (global-set-key (kbd "<f7>") 'recentf-open-files)
 
 
 (require 'yasnippet)
 (yas-global-mode t)
+
+(require 'smex)
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)

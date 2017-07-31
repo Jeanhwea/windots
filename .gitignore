@@ -1,10 +1,12 @@
 emacs/cnfonts/*
-emacs/elpa
 emacs/eshell/*
 emacs/places
-emacs/recentf
 emacs/server/*
 emacs/url/*
+
+emacs/elpa
+emacs/recentf
+emacs/smex-items
 
 
 vim/bundle/*
