@@ -45,11 +45,21 @@
 (global-subword-mode t)
 ;; turn on highlighting current line
 (global-hl-line-mode t)
+;; when a file is updated outside emacs, make it update if it's already opened in emacs
+(global-auto-revert-mode t)
+;; tab, space, indentation settings
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq-default c-basic-offset 4)
+(setq c-default-style "linux" c-basic-offset 4)
 
 
 ;; -------------------- misc --------------------
 ;; backup in one place. flat, no tree structure
 (setq backup-directory-alist '(("" . "~/.emacs.d/backup")))
+(setq backup-by-copying t)
+;; stop creating those #auto-save# files
+(setq auto-save-default nil)
 ;; Keep emacs Custom-settings in separate file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
