@@ -12,8 +12,9 @@
   (add-to-list 'package-archives '("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
 (package-initialize)
 
-;; remove welcome window
+;; remove some distracting things
 (setq inhibit-startup-message t)
+(setq ring-bell-function 'ignore)
 
 ;; Turn off mouse interface early in startup to avoid momentary display
 ; (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
