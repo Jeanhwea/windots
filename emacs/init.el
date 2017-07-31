@@ -59,6 +59,15 @@
 (blink-cursor-mode 0)
 
 
+;; -------------------- key bindings --------------------
+;; easy keys for split windows
+(global-set-key (kbd "M-1") 'delete-other-windows)
+(global-set-key (kbd "M-2") 'split-window-below)
+(global-set-key (kbd "M-3") 'split-window-right)
+(global-set-key (kbd "M-0") 'delete-window)
+(global-set-key (kbd "M-RET") 'other-window)
+
+
 ;; -------------------- misc --------------------
 ;; backup in one place. flat, no tree structure
 (setq backup-directory-alist '(("" . "~/.emacs.d/backup")))
