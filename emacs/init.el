@@ -42,7 +42,9 @@
 ;; show cursor position within line
 (column-number-mode t)
 ;; make cursor movement stop in between camelCase words.
-(global-subword-mode 1)
+(global-subword-mode t)
+;; turn on highlighting current line
+(global-hl-line-mode t)
 
 
 ;; -------------------- misc --------------------
