@@ -1,3 +1,5 @@
+;; customize variables
+;; auto set by emcas GUI configuration
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -13,18 +15,3 @@
    (quote
     (yasnippet color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized smex vdiff-magit magithub magit ## chinese-fonts-setup))))
 
-(require 'cnfonts)
-;; 让 cnfonts 随着 Emacs 自动生效。
-(cnfonts-enable)
-;; 让 spacemacs mode-line 中的 Unicode 图标正确显示。
-;; (cnfonts-set-spacemacs-fallback-fonts)
-  
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
-;; setup solarized dark color theme
-(color-theme-sanityinc-solarized-dark)

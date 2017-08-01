@@ -126,3 +126,13 @@
 ;; (require 'bookmark)
 ;; (bookmark-bmenu-list)
 ;; (switch-to-buffer "*Bookmark List*")
+(require 'cnfonts)
+;; 让 cnfonts 随着 Emacs 自动生效。
+(cnfonts-enable)
+;; 让 spacemacs mode-line 中的 Unicode 图标正确显示。
+;; (cnfonts-set-spacemacs-fallback-fonts)
+  
+;; setup solarized dark color theme
+(require 'color-theme-sanityinc-solarized)
+(color-theme-sanityinc-solarized-dark)
+
