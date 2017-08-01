@@ -4,6 +4,7 @@ emacs/places
 emacs/server/*
 emacs/url/*
 
+emacs/bookmarks
 emacs/elpa
 emacs/recentf
 emacs/smex-items
