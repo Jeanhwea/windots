@@ -57,6 +57,8 @@
 (column-number-mode t)
 ;; make cursor not blink
 (blink-cursor-mode 0)
+;; save/restore opened files and windows config
+(desktop-save-mode 0)
 
 
 ;; -------------------- key bindings --------------------

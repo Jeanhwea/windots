@@ -8,6 +8,7 @@ emacs/bookmarks
 emacs/elpa
 emacs/recentf
 emacs/smex-items
+emacs/.emacs.desktop
 
 
 vim/bundle/*
