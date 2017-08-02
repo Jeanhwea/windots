@@ -1,4 +1,5 @@
-;; EMACS configuration file
+;; -*- coding: utf-8; lexical-binding: t; -*-
+;; emacs configuration file
 ;; author: hujinghui
 ;; github: http://github.com/Jeanhwea
 
