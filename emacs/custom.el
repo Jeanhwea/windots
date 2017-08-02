@@ -19,7 +19,7 @@
  '(initial-frame-alist (quote ((width . 150) (height . 50))))
  '(package-selected-packages
    (quote
-    (molokai-theme yasnippet color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized smex vdiff-magit magithub magit ## chinese-fonts-setup)))
+    (try molokai-theme yasnippet color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized smex vdiff-magit magithub magit ## chinese-fonts-setup)))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
