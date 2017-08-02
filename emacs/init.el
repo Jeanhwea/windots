@@ -11,8 +11,8 @@
   (setq package-archives '(
     ("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
     ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-   )))
-
+    )))
+;; must initail package at first
 (package-initialize)
 
 
@@ -105,6 +105,15 @@
     try-complete-lisp-symbol
     try-complete-file-name-partially
     try-complete-file-name))
+;; Make whitespace-mode dispaly chars
+(progn
+  (setq whitespace-style
+        (quote (face spaces tabs newline space-mark tab-mark newline-mark )))
+  (setq whitespace-display-mappings
+        ;; (and )ll numbers are unicode codepoint in decimal. e.g. (insert-char 182 1)
+        '((space-mark 32 [183] [46])
+          (newline-mark 10 [8629 10])
+          (tab-mark 9 [9654 9] [92 9]))))
 
 
 ;; -------------------- setup plugins --------------------
