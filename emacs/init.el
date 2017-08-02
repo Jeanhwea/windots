@@ -68,6 +68,7 @@
 (global-set-key (kbd "M-3") 'split-window-right)
 (global-set-key (kbd "M-0") 'delete-window)
 (global-set-key (kbd "M-RET") 'other-window)
+(global-set-key (kbd "C-;") 'set-mark-command)
 
 
 ;; -------------------- misc --------------------
