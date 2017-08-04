@@ -1,7 +1,7 @@
-;; -*- coding: utf-8; lexical-binding: t; -*-
-;; emacs configuration file
-;; author: hujinghui
-;; github: http://github.com/Jeanhwea
+;;; init.el --- emacs initial configuration file  -*- lexical-binding: t -*-
+
+;; Author: hujinghui
+;; Github: http://github.com/Jeanhwea
 
 
 ;; -------------------- package manager --------------------
