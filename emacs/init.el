@@ -40,7 +40,7 @@
 ;; make cursor movement stop in between camelCase words.
 (global-subword-mode t)
 ;; turn on highlighting current line
-(global-hl-line-mode t)
+(global-hl-line-mode 0)
 ;; when a file is updated outside emacs, make it update if it's already opened in emacs
 (global-auto-revert-mode t)
 ;; auto insert closing bracket
@@ -62,7 +62,7 @@
 (desktop-save-mode 0)
 
 
-;; -------------------- key bindings --------------------
+;; -------------------- key bindings and hooks --------------------
 ;; easy keys for split windows
 (global-set-key (kbd "M-1") 'delete-other-windows)
 (global-set-key (kbd "M-2") 'split-window-below)
@@ -70,6 +70,8 @@
 (global-set-key (kbd "M-0") 'delete-window)
 (global-set-key (kbd "M-RET") 'other-window)
 (global-set-key (kbd "C-;") 'set-mark-command)
+;; turn on line number on emacs lisp codes
+(add-hook 'emacs-lisp-mode-hook 'linum-mode)
 
 
 ;; -------------------- misc --------------------
