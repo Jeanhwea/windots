@@ -68,8 +68,13 @@
 (global-set-key (kbd "M-2") 'split-window-below)
 (global-set-key (kbd "M-3") 'split-window-right)
 (global-set-key (kbd "M-0") 'delete-window)
-(global-set-key (kbd "M-RET") 'other-window)
+(global-set-key (kbd "M-SPC") 'other-window)
+;; easy setting marks
 (global-set-key (kbd "C-;") 'set-mark-command)
+(global-set-key (kbd "C-x ;") 'rectangle-mark-mode)
+;; faster text editing
+(global-set-key (kbd "C-j") 'delete-indentation)
+
 ;; turn on line number on emacs lisp codes
 (add-hook 'emacs-lisp-mode-hook 'linum-mode)
 
