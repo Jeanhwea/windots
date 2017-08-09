@@ -85,8 +85,10 @@
 (setq backup-by-copying t)
 ;; stop creating those #auto-save# files
 (setq auto-save-default nil)
-;; Keep emacs Custom-settings in separate file
+;; keep emacs custom-settings in separate file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+;; set default fill column
+(setq default-fill-column 80)
 (load custom-file)
 ;; dipslay time in 24hr format
 ;; (display-time-mode t)
